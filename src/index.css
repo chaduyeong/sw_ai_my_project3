@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/* =========================================================
+ * 숭실 카페 (Soongsil Cafe) 전역 스타일 설정
+ * - 전체 배경: 산뜻한 연푸른색 (#f0f7fc)
+ * - 포인트 컬러: 푸른색 (#2b6cb0)
+ * - 기본 폰트: '맑은 고딕', sans-serif
+ * ========================================================= */
+@layer base {
+  body {
+    background-color: #f0f7fc;
+    color: #1a365d;
+    font-family: '맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* =========================================================
+ * 입력칸 공통 스타일 (input, select, textarea)
+ * - 너비 100%, 패딩 10px, 둥근 모서리 8px
+ * - 포커스 시 테두리 푸른색(#2b6cb0) + 연푸른색 그림자
+ * ========================================================= */
+.cafe-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1.5px solid #bfd9f2;
+  background-color: #ffffff;
+  color: #1a365d;
+  font-size: 15px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  box-sizing: border-box;
+}
+
+.cafe-input:focus {
+  outline: none;
+  border-color: #2b6cb0;
+  box-shadow: 0 0 0 3.5px rgba(43, 108, 176, 0.22);
+}
+
+.cafe-input::placeholder {
+  color: #7fa3c7;
+}
+
+/* 라디오 및 체크박스 커스텀 액센트 컬러 (푸른색조) */
+.cafe-choice-input {
+  accent-color: #2b6cb0;
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+}
